@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ReviewController;
+use Illuminate\Support\Facades\Http;
 
 class viewController extends Controller
 {
-    //
     public function dashboard()
     {
-        return view('dashboad');
+        $review = json_decode(Http::withOptions(['verify' => false])
+            ->get("https://sidana.usu.ac.id/api/reviews")->body());
+
+        return view('dashboard', compact('review'));
     }
 
     public function apidocs()

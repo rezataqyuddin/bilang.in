@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\viewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,10 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.dashboard');
 });
 Route::post('/', [ReviewController::class, "store"]);
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/dashboard', [viewController::class, "dashboard"]);
+Route::get('/apidocs', [viewController::class, "apidocs"]);
