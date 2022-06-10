@@ -20,4 +20,9 @@ class viewController extends Controller
     {
         return view('apidocs');
     }
+
+    public function about()
+    {
+        return view('welcome');
+    }
 }

@@ -16,11 +16,13 @@
             <h1><strong>Reza Taqyuddin</strong>, <br>a Tech Enthusiast<br />Student of Magister Data Science and
                 Artificial Intelligence
         </div>
+        <a href="/login" class="btn">Login</a>
+        <a href="/dashboard" class="btn">Dashboard</a>
+        <a href="/apidocs" class="btn">API</a>
     </header>
 
     <!-- Main -->
     <div id="main">
-        <a href="/login" class="btn">Login</a>
         <section id="one">
             <header class="major">
                 <h2>Bilangin.ai</h2>

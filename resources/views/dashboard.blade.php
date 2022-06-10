@@ -1,9 +1,20 @@
 @extends("layouts.dashboard")
 
+@section('pagetitle')
+Dashboard
+@endsection
+
 @section("content")
 <section class="section">
     <div class="section-header">
-        <h1>Dashboard Page</h1>
+        <div class="mr-auto">
+            <h1>Dashboard Page</h1>
+        </div>
+        <ul class="navbar-nav navbar-right">
+            <li>
+                <a href="#" class="btn btn-icon icon-left btn-primary"><i class="fas fa-plus"></i> Fetch New Data</a>
+            </li>
+        </ul>
     </div>
 
     <div class="section-body">
